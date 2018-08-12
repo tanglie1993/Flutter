@@ -15,9 +15,22 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           //child: Text('Hello World'), // Replace the highlighted text...
-          child: Text(wordPair.asPascalCase),  // With this highlighted text.
+          child: RandomWords(),  // With this highlighted text.
         ),
       ),
     );
+  }
+}
+
+class RandomWords extends StatefulWidget {
+  @override
+  RandomWordsState createState() => new RandomWordsState();
+}
+
+class RandomWordsState extends State<RandomWords> {
+  @override
+  Widget build(BuildContext context) {
+    final wordPair = WordPair.random();
+    return Text(wordPair.asPascalCase);
   }
 }

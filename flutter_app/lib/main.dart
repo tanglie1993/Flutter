@@ -45,7 +45,9 @@ class RandomWordsState extends State<RandomWords> {
             // ...then generate 10 more and add them to the suggestions list.
             _suggestions.addAll(generateWordPairs().take(10));
           }
-          return _buildRow(_suggestions[index]);
+          return Image.network(
+            'https://raw.githubusercontent.com/flutter/website/master/src/_includes/code/layout/lakes/images/lake.jpg',
+          );
         }
     );
   }
